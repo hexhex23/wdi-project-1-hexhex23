@@ -1,49 +1,48 @@
 body {
-  background-color: #F7EDE2;
-  text-align: center;
+    background-color: #F7EDE2;
+    text-align: center;
 }
 
 h1 {
-  color: #FFBF69;
-  font-family: "Verdana", sans-serif;
-
+    color: #FFBF69;
+    font-family: "Verdana", sans-serif;
 }
 
 h3 {
-  color: #FFBF69;
-  font-family: "Verdana", sans-serif;
+    color: #FFBF69;
+    font-family: "Verdana", sans-serif;
 }
 
 #cardDisplay2 {
-  border: solid black;
-  border-radius: 25px;
-  width: 50%;
-  height: 60px;
-  margin: auto; 0px;
-
+    border: solid black;
+    border-radius: 25px;
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    0px;
 }
 
 #ruleDisplay {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  border: solid black;
-  width: 80%;
-  height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: solid black;
+    width: 50%;
+    height: 60px;
 }
 
 #button {
-  margin-top: 20px;
-  width: 50%;
-  height: 40px;
-  border-radius: 20px;
-  background-color: #FF4A1C
+    margin-top: 20px;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #FF4A1C
 }
 
 #restartbutton {
-  margin-top: 5px;
-  width: 50%;
-  height: 40px;
-  border-radius: 20px;
-  background-color: #FF4A1C
+    margin-top: 5px;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #FF4A1C
 }
