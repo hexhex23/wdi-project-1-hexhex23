@@ -13,6 +13,11 @@ h3 {
     font-family: "Verdana", sans-serif;
 }
 
+img {
+    width: 70%;
+    height: auto;
+}
+
 #cardDisplay2 {
     border: solid black;
     border-radius: 25px;
