@@ -1,0 +1,32 @@
+body {
+  background-color: #F7EDE2;
+  text-align: center;
+}
+
+h1 {
+  color: #FFBF69;
+  font-family: "Verdana", sans-serif;
+
+}
+
+h3 {
+  color: #FFBF69;
+  font-family: "Verdana", sans-serif;
+}
+
+#cardDisplay2 {
+  border: solid black;
+  border-radius: 25px;
+  width: 50%;
+  height: 350px;
+  margin: auto; 0px;
+
+}
+
+#button {
+  margin-top: 20px;
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #FF4A1C
+}
