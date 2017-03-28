@@ -33,19 +33,17 @@ $(document).ready(function() {
         console.log(card)
         return card
     }
-    //cardNumberGenerator()
 
     //function removes played card from arrayCards and places it in arrayPlayed
     function removingPlayedCard() {
         var index = arrayCards.indexOf(card)
         console.log(index)
         if (index > -1) {
-            arrayPlayed = arrayCards.splice(index, 1)
+            arrayPlayed.push(parseInt(arrayCards.splice(index, 1)))
         }
         console.log(arrayCards)
         console.log(arrayPlayed)
     }
-    //removingPlayedCard()
 
     //function allows game to restart
     $("#restartbutton").click(function() {
