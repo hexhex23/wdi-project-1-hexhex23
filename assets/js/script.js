@@ -6,6 +6,12 @@ $(document).ready(function() {
     arrayPlayed = [];
 
     var card;
+    var jackHeart;
+    var jackDia;
+    var jackSpade;
+    var jackClub;
+    var five;
+    var queen;
 
     //Click button to display card
     $("#button").click(function() {
@@ -14,6 +20,11 @@ $(document).ready(function() {
         displayImages()
         document.getElementById('cardDisplay').textContent = card
         document.getElementById('ruleDisplay').textContent = displayRules(card)
+        $('#imageDisplay').imagesLoaded( function() {
+          jackRule()
+          fiveRule()
+          queenRule()
+})
     })
 
     //function generates random number between 1 to 52
@@ -39,7 +50,7 @@ $(document).ready(function() {
     //function allows game to restart
     $("#restartbutton").click(function() {
         arrayCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]
-        document.querySelector("img").setAttribute("src", "images/StartCard.png")
+        document.querySelector("img").setAttribute("src", "images/burnbabyburn.png")
         document.getElementById('cardDisplay').textContent = 53
         document.getElementById('ruleDisplay').textContent = displayRules(53)
     })
@@ -160,7 +171,7 @@ $(document).ready(function() {
         } else if (card === 12) {
             document.querySelector("img").setAttribute("src", "images/queenhearts.png")
         } else if (card === 13) {
-            document.querySelector("img").setAttribute("src", "images/kingshearts.png")
+            document.querySelector("img").setAttribute("src", "images/kinghearts.png")
         } else if (card === 14) {
             document.querySelector("img").setAttribute("src", "images/acediamonds.png")
         } else if (card === 15) {
@@ -244,5 +255,46 @@ $(document).ready(function() {
         }
     }
     //displayImages()
+
+    //function for displaying user rules when jack is played
+    function jackRule() {
+      if (card === 11) {
+        jackHeart = prompt("Enter a rule", "Rule here")
+      } if (card === 24) {
+        jackDia = prompt("Enter a rule", "Rule here")
+      } if (card === 37) {
+        jackSpade = prompt("Enter a rule", "Rule here")
+      } if (card === 50) {
+        jackClub = prompt("Enter a rule", "Rule here")
+      }
+      console.log(jackHeart)
+      console.log(jackDia)
+      console.log(jackSpade)
+      console.log(jackClub)
+      document.getElementById('jackRuleDisplay').textContent = jackHeart + jackDia + jackSpade + jackClub
+      return jackHeart + jackDia + jackSpade + jackClub
+    }
+    jackRule()
+
+
+    //function for displaying user rules when five is played
+    function fiveRule() {
+      if (card === 5 || card === 18 || card === 31 || card === 44) {
+        five = prompt("Who is the Thumb Master", "Name here")
+      }
+      document.getElementById('thumbMaster').textContent = five
+      return five
+    }
+    fiveRule()
+
+    //function for displaying user rules when queen is played
+    function queenRule() {
+      if (card === 12 || card === 25 || card === 38 || card === 51) {
+        queen = prompt("Who is the Queen Master", "Name here")
+      }
+      document.getElementById('questionMaster').textContent = queen
+      return queen
+    }
+    queenRule()
 
 })
