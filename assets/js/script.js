@@ -15,10 +15,10 @@ $(document).ready(function() {
 
     //Click button to display card
     $("#button").click(function() {
-        winningConditions()
-        //console.log(winningConditions())
+            winningConditions()
             cardNumberGenerator()
             removingPlayedCard()
+            console.log(arrayCards)
             displayImages()
             document.getElementById('cardDisplay').textContent = card
             document.getElementById('ruleDisplay').textContent = displayRules(card)
@@ -32,8 +32,10 @@ $(document).ready(function() {
 
     //function generates random number between 1 to 52
     function cardNumberGenerator() {
-        card = Math.floor(Math.random() * 52 + 1)
-        console.log(card)
+      var indexGen = Math.floor(Math.random() * (arrayCards.length-1))
+        card = arrayCards[indexGen]
+        console.log('index gen', indexGen );
+        console.log('number gen', card)
         return card
     }
 
@@ -44,9 +46,25 @@ $(document).ready(function() {
         if (index > -1) {
             arrayPlayed.push(parseInt(arrayCards.splice(index, 1)))
         }
-        console.log(arrayCards)
-        console.log(arrayPlayed)
+        console.log('remove in play', arrayCards)
+        console.log('remove played', arrayPlayed)
+        return arrayCards
     }
+    //console.log(arrayCards)
+
+    // //function generates random number from 1 to 52 and removes played card from arrayCards to arrayPlayed
+    // function cardNumberGenerator() {
+    //   card = arrayCards[Math.floor(Math.random() * arrayCards.length)] + 1
+    //   console.log(card)
+    //   var index = arrayCards.indexOf(card)
+    //   console.log(index)
+    //   if (index > -1) {
+    //       arrayPlayed.push(parseInt(arrayCards.splice(index, 1)))
+    //   }
+    //   console.log(arrayCards)
+    //   console.log(arrayPlayed)
+    //   return card
+    // }
 
     //function allows game to restart
     $("#restartbutton").click(function() {
@@ -271,12 +289,7 @@ $(document).ready(function() {
         if (card === 50) {
             jackClub = prompt("Enter a rule", "Rule here")
         }
-        console.log(jackHeart)
-        console.log(jackDia)
-        console.log(jackSpade)
-        console.log(jackClub)
-        document.getElementById('jackRuleDisplay').textContent = jackHeart + jackDia + jackSpade + jackClub
-        return jackHeart + jackDia + jackSpade + jackClub
+        document.getElementById('jackRuleDisplay').textContent = jackHeart + " " + jackDia + " " + jackSpade + " " + jackClub
     }
     jackRule()
 
@@ -304,7 +317,7 @@ $(document).ready(function() {
     //function for determining if 4 kings have been played
     function winningConditions() {
         var winning = arrayPlayed.indexOf(13, 26, 39, 52)
-        console.log(winning)
+        console.log('winning', winning)
         if (winning > 0) {
             return alert("Last King Drawn: Down It!!")
           }
