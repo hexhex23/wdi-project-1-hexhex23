@@ -50,30 +50,12 @@ $(document).ready(function() {
         console.log('remove played', arrayPlayed)
         return arrayCards
     }
-    //console.log(arrayCards)
-
-    // //function generates random number from 1 to 52 and removes played card from arrayCards to arrayPlayed
-    // function cardNumberGenerator() {
-    //   card = arrayCards[Math.floor(Math.random() * arrayCards.length)] + 1
-    //   console.log(card)
-    //   var index = arrayCards.indexOf(card)
-    //   console.log(index)
-    //   if (index > -1) {
-    //       arrayPlayed.push(parseInt(arrayCards.splice(index, 1)))
-    //   }
-    //   console.log(arrayCards)
-    //   console.log(arrayPlayed)
-    //   return card
-    // }
 
     //function allows game to restart
     $("#restartbutton").click(function() {
-        arrayCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]
-        arrayPlayed = []
-        document.querySelector("img").setAttribute("src", "images/burnbabyburn.png")
-        document.getElementById('cardDisplay').textContent = 53
-        document.getElementById('ruleDisplay').textContent = displayRules(53)
+        window.location.reload(true)
     })
+
     //function to display rules - check if more efficient to use if/else
     function displayRules(val) {
         var answer = "";
