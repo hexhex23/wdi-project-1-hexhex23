@@ -10,7 +10,7 @@ footer {
 }
 
 h1 {
-    color: black;
+    color: #313638;
     font-family: 'Pacifico', cursive;
     font-size: 70px;
     margin-top: -20px;
@@ -43,25 +43,30 @@ img {
 
 #button {
     margin-top: 20px;
-    width: 50%;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #FF4A1C;
+    margin-right: 10px;
+    width: 45%;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #F4442E;
+    color: #313638;
     font-family: 'Pacifico', cursive;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 #restartbutton {
-    margin-top: 5px;
-    width: 50%;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #FF4A1C;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 45%;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #F4442E;
+    color: #313638;
     font-family: 'Pacifico', cursive;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 #jackRuleDisplay {
+    margin-top: 10px;
     border: solid black;
     height: 40px;
     font-family: 'Oswald', sans-serif;
@@ -79,4 +84,16 @@ img {
     height: 40px;
     width: 150px;
     font-family: 'Pacifico', cursive;
+}
+
+a:link {
+  colour: #313638;
+}
+
+a:visited {
+  colour: #EDD382;
+}
+
+a:hover {
+  font-weight: bold;
 }
