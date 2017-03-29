@@ -6,35 +6,33 @@ $(document).ready(function() {
     arrayPlayed = [];
 
     var card;
-    var jackHeart;
-    var jackDia;
-    var jackSpade;
-    var jackClub;
     var five;
     var queen;
+    var jackHeart = " "
+    var jackDia = " "
+    var jackSpade = " "
+    var jackClub = " "
 
     //Click button to display card
     $("#button").click(function() {
-            winningConditions()
-            cardNumberGenerator()
-            removingPlayedCard()
-            console.log(arrayCards)
-            displayImages()
-            document.getElementById('cardDisplay').textContent = card
-            document.getElementById('ruleDisplay').textContent = displayRules(card)
-            $('#imageDisplay').imagesLoaded(function() {
-                jackRule()
-                fiveRule()
-                queenRule()
-            })
-        }
-    )
+        winningConditions()
+        cardNumberGenerator()
+        removingPlayedCard()
+        console.log(arrayCards)
+        displayImages()
+        document.getElementById('ruleDisplay').textContent = displayRules(card)
+        $('#imageDisplay').imagesLoaded(function() {
+            jackRule()
+            fiveRule()
+            queenRule()
+        })
+    })
 
     //function generates random number between 1 to 52
     function cardNumberGenerator() {
-      var indexGen = Math.floor(Math.random() * (arrayCards.length-1))
+        var indexGen = Math.floor(Math.random() * (arrayCards.length - 1))
         card = arrayCards[indexGen]
-        console.log('index gen', indexGen );
+        console.log('index gen', indexGen);
         console.log('number gen', card)
         return card
     }
@@ -47,7 +45,7 @@ $(document).ready(function() {
             arrayPlayed.push(parseInt(arrayCards.splice(index, 1)))
         }
         console.log('remove in play', arrayCards)
-        console.log('remove played', arrayPlayed)
+        console.log('played cards', arrayPlayed)
         return arrayCards
     }
 
@@ -255,21 +253,21 @@ $(document).ready(function() {
             document.querySelector("img").setAttribute("src", "images/StartCard.png")
         }
     }
-    //displayImages()
+
 
     //function for displaying user rules when jack is played
     function jackRule() {
         if (card === 11) {
-            jackHeart = prompt("Enter a rule", "Rule here")
+            jackHeart = prompt("Enter a rule for the rest of the game", "Rule here")
         }
         if (card === 24) {
-            jackDia = prompt("Enter a rule", "Rule here")
+            jackDia = prompt("Enter a rule for the rest of the game", "Rule here")
         }
         if (card === 37) {
-            jackSpade = prompt("Enter a rule", "Rule here")
+            jackSpade = prompt("Enter a rule for the rest of the game", "Rule here")
         }
         if (card === 50) {
-            jackClub = prompt("Enter a rule", "Rule here")
+            jackClub = prompt("Enter a rule for the rest of the game", "Rule here")
         }
         document.getElementById('jackRuleDisplay').textContent = jackHeart + " " + jackDia + " " + jackSpade + " " + jackClub
     }
@@ -298,11 +296,10 @@ $(document).ready(function() {
 
     //function for determining if 4 kings have been played
     function winningConditions() {
-        var winning = arrayPlayed.indexOf(13, 26, 39, 52)
-        console.log('winning', winning)
-        if (winning > 0) {
-            return alert("Last King Drawn: Down It!!")
-          }
+        if (arrayPlayed.includes(13) === true && arrayPlayed.includes(26) === true && arrayPlayed.includes(39) === true && arrayPlayed.includes(52) === true) {
+            alert("GAME OVER Last King Drawn: Down It!!")
+            window.location.reload(true)
+        }
     }
 
 })
