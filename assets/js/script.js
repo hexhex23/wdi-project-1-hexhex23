@@ -1,14 +1,5 @@
 $(document).ready(function() {
 
-  // swal({
-  //   title: 'Error!',
-  //   text: 'Do you want to continue',
-  //   type: 'input',
-  //   confirmButtonText: 'Cool'
-  // })
-  //
-
-
     //array of 52 playing cards
     arrayCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]
 
@@ -63,7 +54,7 @@ $(document).ready(function() {
         window.location.reload(true)
     })
 
-    //function to display rules - check if more efficient to use if/else
+    //function to display rules
     function displayRules(val) {
         var answer = "";
         switch (val) {
@@ -71,79 +62,79 @@ $(document).ready(function() {
             case (14):
             case (27):
             case (40):
-                answer = "Ace: WATERFALL! Drink until the person who picked this card stops.";
+                answer = "ACE WATERFALL! Drink until the person who picked this card stops.";
                 break;
             case (2):
             case (15):
             case (28):
             case (41):
-                answer = "2: Choose someone to drink.";
+                answer = "Pick someone to drink.";
                 break;
             case (3):
             case (16):
             case (29):
             case (42):
-                answer = "3: Drink up buddy (you drink).";
+                answer = "Drink up buddy (you drink).";
                 break;
             case (4):
             case (17):
             case (30):
             case (43):
-                answer = "4: Drink up all the ladies.";
+                answer = "Drink up ladies.";
                 break;
             case (5):
             case (18):
             case (31):
             case (44):
-                answer = "5: Thumb Master. Place your thumb on the table at any time and last person to follow suit will have to drink.";
+                answer = "Thumb Master: Place your thumb on the table at any time and last person to follow suit, drinks.";
                 break;
             case (6):
             case (19):
             case (32):
             case (45):
-                answer = "6: Drink up all the lads.";
+                answer = "Drink up lads.";
                 break;
             case (7):
             case (20):
             case (33):
             case (46):
-                answer = "7: Seven Heaven. Last to point to the skies, drink!";
+                answer = "Seven Heaven: Last to point to the skies, drink!";
                 break;
             case (8):
             case (21):
             case (34):
             case (47):
-                answer = "8: Choose a buddy to drink with you.";
+                answer = "Pick a buddy to drink with you.";
                 break;
             case (9):
             case (22):
             case (35):
             case (48):
-                answer = "9: Pick a word to rhyme, go round the table.";
+                answer = "Pick a word to rhyme, go round the table.";
                 break;
             case (10):
             case (23):
             case (36):
             case (49):
-                answer = "10: Pick a category, go round the table.";
+                answer = "Pick a category, go round the table.";
                 break;
             case (11):
             case (24):
             case (37):
             case (50):
-                answer = "Jack: Make a rule everyone must follow for the rest of the game!";
+                answer = "Make up a rule everyone must follow for the rest of the game!";
                 break;
             case (12):
             case (25):
             case (38):
             case (51):
-                answer = "Queen: Question Master. If you ask a question and a player answers, they have to drink.";
+                answer = "Question Master: If you ask a question and a player answers, they have to drink.";
                 break;
             case (13):
             case (26):
             case (39):
             case (52):
-                answer = "King: Add to the dirty pint. Whoever picks the 4th king, has to drink the pint.";
+                answer = "Add to the dirty pint. Whoever picks the 4th king, has to drink the pint.";
                 break;
             case (53):
                 answer = "Lets get started!"
