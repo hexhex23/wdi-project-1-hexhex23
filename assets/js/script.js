@@ -142,7 +142,12 @@ $(document).ready(function() {
     }
     console.log(displayRules(card))
 
+
     //function to display a different img on button click
+    // function displayImages() {
+    //   document.querySelector("img").setAttribute("src", "'images/' + card + '.png'")
+    // } console.log(displayImages())
+
     function displayImages() {
         if (card === 1) {
             document.querySelector("img").setAttribute("src", "images/acehearts.png")
