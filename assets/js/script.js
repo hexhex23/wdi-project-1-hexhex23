@@ -46,7 +46,6 @@ $(document).ready(function() {
         }
         console.log('remove in play', arrayCards)
         console.log('played cards', arrayPlayed)
-        return arrayCards
     }
 
     //function allows game to restart
@@ -271,7 +270,6 @@ $(document).ready(function() {
         }
         document.getElementById('jackRuleDisplay').textContent = jackHeart + "\r\n" + jackDia + "\r\n" + jackSpade + "\r\n" + jackClub
     }
-    jackRule()
 
 
     //function for displaying user rules when five is played
@@ -280,9 +278,7 @@ $(document).ready(function() {
             five = prompt("Who is the Thumb Master", "Name")
         }
         document.getElementById('thumbMaster').textContent = five
-        return five
     }
-    fiveRule()
 
     //function for displaying user rules when queen is played
     function queenRule() {
@@ -290,9 +286,7 @@ $(document).ready(function() {
             queen = prompt("Who is the Question Master", "Name")
         }
         document.getElementById('questionMaster').textContent = queen
-        return queen
     }
-    queenRule()
 
     //function for determining if 4 kings have been played
     function winningConditions() {
