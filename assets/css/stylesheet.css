@@ -11,68 +11,50 @@ footer {
 h1 {
     color: #43494C;
     font-family: 'Pacifico', cursive;
-    font-size: 400%;
+    font-size: 350%;
     margin-top: -20px;
 }
 
 img {
-    width: 70%;
-    height: auto;
+    width: auto;
+    height: 75vh;
     z-index: 100;
 }
 
 #wrapperOuter {
-  border: dashed orange;
-  overflow: hidden;
-  width: 95%;
-  min-height: 100vh;
-  max-height: 100%;
-  margin-top: -60px;
+    border: dashed orange;
+    overflow: hidden;
+    width: 95%;
+    min-height: 100vh;
+    max-height: 100%;
+    margin-top: -60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#container {
-    width: 80%;
-    margin: -10px auto 50px;
+#wrapperInnerTop {
+    width: 90%;
+    margin: -10px auto 40px 50px;
     max-width: 500px;
     float: left;
 }
 
-#wrapperInner {
-    width: 80%;
+#wrapperInnerBtm {
+    width: 90%;
     margin: auto;
     overflow: hidden;
     max-width: 500px;
     float: right;
 }
 
-#first {
+#masters {
     width: 50%;
-    float:left;
-
+    float: left;
 }
-#second {
+
+#jack {
     width: 50%;
     overflow: hidden;
-}
-
-@media all and (max-width:800px)
-{
-    #first, #second
-    {
-        display: block;
-        float: none;
-        width: 100%;
-    }
-}
-
-@media all and (max-width:600px)
-{
-    #container, #wrapperInner
-    {
-        display: block;
-        float: none;
-        width: 100%;
-    }
 }
 
 #imageDisplay {
@@ -84,14 +66,14 @@ img {
 #ruleDisplay {
     margin-left: 10px;
     width: 95%;
-    height: 150px;
+    height: 45%;
     font-family: 'Oswald', sans-serif;
     color: white;
-    background-color: rgba(255,0,0,0.6);
-    font-size: 30px;
+    background-color: rgba(255, 0, 0, 0.6);
+    font-size: 6vh;
     position: absolute;
-    margin-top: 35%;
-    z-index:1000;
+    margin-top: 25%;
+    z-index: 1000;
     -webkit-transform: skewY(-10deg);
     -moz-transform: skewY(-10deg);
     -ms-transform: skewY(-10deg);
@@ -112,7 +94,7 @@ img {
 }
 
 .button:hover {
-  background-color: #FB8B24;
+    background-color: #FB8B24;
 }
 
 #jackRuleDisplay {
@@ -120,6 +102,7 @@ img {
     width: 80%;
     height: auto;
     font-family: 'Oswald', sans-serif;
+    font-size: 3vh;
 }
 
 #thumbMaster {
@@ -127,6 +110,7 @@ img {
     height: 5.5vh;
     width: 80%;
     font-family: 'Pacifico', cursive;
+    font-size: 3.5vh;
     margin: auto;
 }
 
@@ -135,27 +119,70 @@ img {
     height: 5.5vh;
     width: 80%;
     font-family: 'Pacifico', cursive;
+    font-size: 3.5vh;
     margin: auto;
 }
 
 a:link {
-  colour: black;
-  font-size: 20px;
+    colour: black;
+    font-size: 20px;
 }
 
 a:visited {
-  colour: orange;
+    colour: orange;
 }
 
 a:hover {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #listOfRules {
-  float: none;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  width: 50%;
-  text-align: left;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 50%;
+    text-align: left;
+}
+
+@media all and (max-width:1140px) {
+    #masters, #jack {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    #wrapperInnerTop, #wrapperInnerBtm {
+        display: inline-block;
+        float: none;
+        width: 100%;
+    }
+}
+
+@media all and (max-width:620px) {
+    #masters, #jack {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    #wrapperInnerTop, #wrapperInnerBtm {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    #wrapperInnerTop {
+        margin: -10px auto 0px;
+    }
+    #ruleDisplay {
+        font-size: 3.5vh;
+    }
+    h1 {
+        font-size: 300%;
+    }
+    .button {
+        font-size: 120%;
+    }
+    img {
+        width: 70%;
+        height: auto;
+    }
 }

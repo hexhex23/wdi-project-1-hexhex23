@@ -297,19 +297,19 @@ $(document).ready(function() {
     //function for determining if 4 kings have been played
     function winningConditions() {
         if (arrayPlayed.includes(13) === true && arrayPlayed.includes(26) === true && arrayPlayed.includes(39) === true && arrayPlayed.includes(52) === true) {
-          swal({
-            title: 'GAME OVER',
-            text: '4th King Drawn: Drink The Dirty Pint',
-            timer: 10000
+            swal({
+                title: 'GAME OVER',
+                text: '4th King Drawn: Drink The Dirty Pint',
+                timer: 10000
             }).then(
-  function () {},
-  // handling the promise rejection
-  function (dismiss) {
-    if (dismiss === 'timer') {
-      console.log('I was closed by the timer')
-    }
-  }
-)
+                function() {},
+                // handling the promise rejection
+                function(dismiss) {
+                    if (dismiss === 'timer') {
+                        console.log('I was closed by the timer')
+                    }
+                }
+            )
         }
     }
 
