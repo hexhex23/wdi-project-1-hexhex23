@@ -1,8 +1,12 @@
 body {
     /*background-image: url("background.jpg");*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-repeat: no-repeat;
     text-align: center;
     font-family: 'Oswald', sans-serif;
+    max-width: 500px;
 }
 
 footer {
@@ -13,7 +17,7 @@ footer {
 h1 {
     color: #43494C;
     font-family: 'Pacifico', cursive;
-    font-size: 15vw;
+    font-size: 400%;
     margin-top: -20px;
 }
 
@@ -34,6 +38,7 @@ img {
     border: dashed orange;
     margin: auto;
     overflow: hidden;
+    max-width: 500px;
 }
 
 #first {
@@ -44,6 +49,16 @@ img {
 #second {
     width: 50%;
     overflow: hidden;
+}
+
+@media all and (max-width:800px)
+{
+    #first, #second
+    {
+        display: block;
+        float: none;
+        width: 100%;
+    }
 }
 
 #imageDisplay {
@@ -60,21 +75,9 @@ img {
     font-family: 'Oswald', sans-serif;
 }
 
-#button {
+.button {
     margin-top: 20px;
     margin-right: 10px;
-    width: 45%;
-    height: 50px;
-    border-radius: 30px;
-    background-color: #F4442E;
-    color: #43494C;
-    font-family: 'Pacifico', cursive;
-    font-size: 150%;
-}
-
-#restartbutton {
-    margin-top: 20px;
-    margin-left: 10px;
     width: 45%;
     height: 50px;
     border-radius: 30px;
