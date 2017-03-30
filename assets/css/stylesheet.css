@@ -6,13 +6,14 @@ body {
 }
 
 footer {
+    margin-top: 30px;
     font-family: 'Oswald', sans-serif;
 }
 
 h1 {
     color: #313638;
     font-family: 'Pacifico', cursive;
-    font-size: 70px;
+    font-size: 15vw;
     margin-top: -20px;
 }
 
@@ -25,6 +26,24 @@ img {
     border: dashed orange;
     width: 80%;
     margin: -70px auto 50px;
+    max-width: 500px;
+}
+
+#wrapper {
+    width: 80%;
+    border: dashed orange;
+    margin: auto;
+    overflow: hidden;
+}
+
+#first {
+    width: 50%;
+    float:left;
+
+}
+#second {
+    width: 50%;
+    overflow: hidden;
 }
 
 #imageDisplay {
@@ -50,7 +69,7 @@ img {
     background-color: #F4442E;
     color: #313638;
     font-family: 'Pacifico', cursive;
-    font-size: 25px;
+    font-size: 150%;
 }
 
 #restartbutton {
@@ -62,36 +81,39 @@ img {
     background-color: #F4442E;
     color: #313638;
     font-family: 'Pacifico', cursive;
-    font-size: 25px;
+    font-size: 150%;
 }
 
 #jackRuleDisplay {
-    margin-top: 10px;
-    border: solid black;
-    height: 40px;
+    margin: auto;
+    width: 80%;
+    height: auto;
     font-family: 'Oswald', sans-serif;
 }
 
 #thumbMaster {
     border: solid black;
-    height: 40px;
-    width: 150px;
+    height: 5.5vh;
+    width: 80%;
     font-family: 'Pacifico', cursive;
+    margin: auto;
 }
 
 #questionMaster {
     border: solid black;
-    height: 40px;
-    width: 150px;
+    height: 5.5vh;
+    width: 80%;
     font-family: 'Pacifico', cursive;
+    margin: auto;
 }
 
 a:link {
-  colour: #313638;
+  colour: black;
+  font-size: 20px;
 }
 
 a:visited {
-  colour: #EDD382;
+  colour: orange;
 }
 
 a:hover {
