@@ -267,18 +267,18 @@ $(document).ready(function() {
     //function for displaying user rules when jack is played
     function jackRule() {
         if (card === 11) {
-            jackHeart = prompt("Enter a rule for the rest of the game", "Rule here")
+            jackHeart = prompt("Enter a rule for the rest of the game", "E.g No cursing")
         }
         if (card === 24) {
-            jackDia = prompt("Enter a rule for the rest of the game", "Rule here")
+            jackDia = prompt("Enter a rule for the rest of the game", "E.g No cursing")
         }
         if (card === 37) {
-            jackSpade = prompt("Enter a rule for the rest of the game", "Rule here")
+            jackSpade = prompt("Enter a rule for the rest of the game", "E.g No cursing")
         }
         if (card === 50) {
-            jackClub = prompt("Enter a rule for the rest of the game", "Rule here")
+            jackClub = prompt("Enter a rule for the rest of the game", "E.g No cursing")
         }
-        document.getElementById('jackRuleDisplay').textContent = jackHeart + " " + jackDia + " " + jackSpade + " " + jackClub
+        document.getElementById('jackRuleDisplay').textContent = jackHeart + "\r\n" + jackDia + "\r\n" + jackSpade + "\r\n" + jackClub
     }
     jackRule()
 
@@ -286,7 +286,7 @@ $(document).ready(function() {
     //function for displaying user rules when five is played
     function fiveRule() {
         if (card === 5 || card === 18 || card === 31 || card === 44) {
-            five = prompt("Who is the Thumb Master", "Name here")
+            five = prompt("Who is the Thumb Master", "Name")
         }
         document.getElementById('thumbMaster').textContent = five
         return five
@@ -296,7 +296,7 @@ $(document).ready(function() {
     //function for displaying user rules when queen is played
     function queenRule() {
         if (card === 12 || card === 25 || card === 38 || card === 51) {
-            queen = prompt("Who is the Question Master", "Name here")
+            queen = prompt("Who is the Question Master", "Name")
         }
         document.getElementById('questionMaster').textContent = queen
         return queen
